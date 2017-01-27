@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 import  	java.net.URLConnection;
+import  	java.net.HttpURLConnection;
 /*import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -91,11 +92,21 @@ public class TwitterService extends BackgroundService {
 		HttpGet getMethod;
 		HttpResponse response;
 		InputStream responseStream;
+
+URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1");
+   HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+
 		try {
-			httpClient = new DefaultHttpClient();
+
+     responseStream = new BufferedInputStream(urlConnection.getInputStream());
+   //  readStream(responseStream);
+   
+
+//---------_------->
+	/*		httpClient = new DefaultHttpClient();
 			getMethod = new HttpGet("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1");
 			response = httpClient.execute(getMethod);
-			responseStream = response.getEntity().getContent();
+			responseStream = response.getEntity().getContent();*/
 		
 			StringBuilder dataString = new StringBuilder();
 			char[] buffer = new char[1024];
@@ -122,6 +133,9 @@ public class TwitterService extends BackgroundService {
 			Log.d(TAG, ex.getMessage());
 		} finally {
 			// Close out the response stream and any open connections in production code
+
+     urlConnection.disconnect();
+   
 		}
 		
 		return result;
