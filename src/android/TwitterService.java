@@ -233,7 +233,7 @@ mNotifyMgr.notify(mNotificationId, mBuilder.build());
     private class DownloadTask extends AsyncTask<String, Void, String> {
 
         @Override
-        protected String doInBackground(String... urls) {
+        protected Boolean doInBackground(String... urls) {
             try {
                 return loadFromNetwork(urls[0]);
             } catch (Exception ex) {
@@ -254,7 +254,7 @@ return false;
     }
 
     /** Initiates the fetch operation. */
-    private String loadFromNetwork(String urlString) throws IOException {
+    private Boolean loadFromNetwork(String urlString) throws IOException {
         InputStream stream = null;
       /*  String str ="";*/
 Boolean result = false;
