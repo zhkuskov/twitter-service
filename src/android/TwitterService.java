@@ -233,13 +233,17 @@ mNotifyMgr.notify(mNotificationId, mBuilder.build());
     private class DownloadTask extends AsyncTask<String, Void, String> {
 
         @Override
-        protected Boolean doInBackground(String... urls) {
+        protected String doInBackground(String... urls) {
             try {
-                return loadFromNetwork(urls[0]);
+                if(loadFromNetwork(urls[0])){
+return 'yes';
+}else{
+return 'no';
+}
             } catch (Exception ex) {
               Log.d(TAG, ex.getMessage());
 
-return false;
+return 'no';
             }
         }
 
