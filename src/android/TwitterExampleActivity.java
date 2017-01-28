@@ -14,3 +14,5 @@ super.onCreate(savedInstanceState);
  /*setContentView(R.layout.main); 
 cwv = (CordovaWebView) findViewById(R.id.tutorialView);*/ Config.init(this); cwv.loadUrl(Config.getStartUrl());
  }
+
+}
