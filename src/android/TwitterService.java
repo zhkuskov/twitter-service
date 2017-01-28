@@ -164,7 +164,7 @@ Drawable icon = res.getDrawable(R.drawable.icon);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
         notification.setLatestEventInfo(this, contentTitle, contentText, contentIntent);
         
-        NotificationManager nm = (NotificationManager)this.getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         nm.notify(1, notification);
 	}
 	
