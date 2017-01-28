@@ -1,19 +1,32 @@
 package com.red_folder.twitter;
 
 import android.app.Activity;
-import org.apache.cordova.*;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 
 
 
-public class TwitterExampleActivity extends Activity implements CordovaInterface { 
-CordovaWebView cwv; 
+public class TwitterExampleActivity extends Activity { 
+private static String TAG = "TwitterExampleActivity";
 /* Called when the activity is first created. */
 
  @Override public void onCreate(Bundle savedInstanceState) { 
-super.onCreate(savedInstanceState);
- /*setContentView(R.layout.main); 
-cwv = (CordovaWebView) findViewById(R.id.tutorialView);*/ Config.init(this); cwv.loadUrl(Config.getStartUrl());
+  super.onCreate(savedInstanceState);
+    Log.v(TAG, "onCreate");
+
+
+      forceMainActivityReload();
+    
  }
+
+ private void forceMainActivityReload() {
+    PackageManager pm = getPackageManager();
+    Intent launchIntent = pm.getLaunchIntentForPackage(getApplicationContext().getPackageName());
+    startActivity(launchIntent);
+  }
 
 }
