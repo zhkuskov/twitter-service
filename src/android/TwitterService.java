@@ -148,7 +148,7 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 		return result;
 	}
 	
-	public void showNotification( String contentTitle, String contentText ) {
+	public void showNotification( CharSequence contentTitle, CharSequence contentText ) {
 
 String ns = Context.NOTIFICATION_SERVICE;
         
