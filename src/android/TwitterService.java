@@ -88,9 +88,10 @@ public class TwitterService extends BackgroundService {
 		String oldMaxID = getMaxID();
 		String newMaxID = oldMaxID;
 		
-		HttpClient httpClient;
+	/*	HttpClient httpClient;
 		HttpGet getMethod;
-		HttpResponse response;
+		HttpResponse response;*/
+
 		InputStream responseStream;
 
 URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1");
