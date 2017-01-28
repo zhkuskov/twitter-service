@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 import java.io.BufferedInputStream;
 import java.io.Reader;
 
+import android.content.res.Resources;
+import  	android.graphics.drawable.Drawable;
+
 import  	java.net.URL;
 import  	java.net.URLConnection;
 import  	java.net.HttpURLConnection;
