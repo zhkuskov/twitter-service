@@ -18,6 +18,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;*/
 import org.json.JSONObject;
 
+import android.support.v4.app.NotificationCompat.Builder;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -147,18 +148,45 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 		
 		return result;
 	}
-	
-	public void showNotification( CharSequence contentTitle, CharSequence contentText ) {
 
-String ns = Context.NOTIFICATION_SERVICE;
+/*---------------------*/	
+public void showNotification( CharSequence contentTitle, CharSequence contentText ) {
+
+NotificationCompat.Builder mBuilder =
+    new NotificationCompat.Builder(this)
+    .setSmallIcon(R.drawable.notification_icon)
+    .setContentTitle("My notification")
+    .setContentText("Hello World!");
+
+
+Intent resultIntent = new Intent(this, TwitterExampleActivity.class);
+
+// Because clicking the notification opens a new ("special") activity, there's
+//no need to create an artificial back stack.
+
+PendingIntent resultPendingIntent =
+    PendingIntent.getActivity(
+    this,
+    0,
+    resultIntent,
+    0
+);
+
+mBuilder.setContentIntent(resultPendingIntent);
+
+// Sets an ID for the notification
+int mNotificationId = 001;
+// Gets an instance of the NotificationManager service
+NotificationManager mNotifyMgr =
+        (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+// Builds the notification and issues it.
+mNotifyMgr.notify(mNotificationId, mBuilder.build());
+
+/*String ns = Context.NOTIFICATION_SERVICE;
         
 NotificationManager nm = (NotificationManager) getSystemService(ns);
 
-/*	int icon = R.drawable(ic_menu_edit);*/
-/*
-Resources res = getResources();
-Drawable icon = res.getDrawable(R.drawable.icon);
-*/
+
         long when = System.currentTimeMillis();
         
         Notification notification = new Notification(R.drawable.sym_action_email, contentTitle, when);
@@ -174,6 +202,8 @@ PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationInt
 notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
                 
 nm.notify(1, notification);
+*/
+
 	}
 	
 }
