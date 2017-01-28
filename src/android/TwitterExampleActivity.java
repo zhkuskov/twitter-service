@@ -1,4 +1,4 @@
-package com.red_folder.twitter;
+package com.red_folder.phonegap.plugin.backgroundservice.twitter;
 
 import android.app.Activity;
 
