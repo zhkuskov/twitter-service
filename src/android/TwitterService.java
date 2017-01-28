@@ -149,14 +149,14 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 	}
 	
 	public void showNotification( String contentTitle, String contentText ) {
-	int icon = R.drawable.ic_menu_edit;
+/*	int icon = R.drawable(ic_menu_edit);*/
 /*
 Resources res = getResources();
 Drawable icon = res.getDrawable(R.drawable.icon);
 */
         long when = System.currentTimeMillis();
         
-        Notification notification = new Notification(icon, contentTitle, when);
+        Notification notification = new Notification(1, contentTitle, when);
 		
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		Intent notificationIntent = new Intent(this, TwitterExampleActivity.class);
