@@ -30,6 +30,16 @@
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
   
+     <activity
+            android:name=".TwitterExampleActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
             <service android:name="com.red_folder.phonegap.plugin.backgroundservice.twitter.TwitterService">
                 <intent-filter>         
                     <action android:name="com.red_folder.phonegap.plugin.backgroundservice.twitter.TwitterService"/> 
