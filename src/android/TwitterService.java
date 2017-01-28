@@ -2,6 +2,7 @@ package com.red_folder.sample;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.BufferedInputStream;
 import java.io.Reader;
 
 import  	java.net.URL;
