@@ -7,6 +7,7 @@ import java.io.Reader;
 
 import android.content.res.Resources;
 import  	android.graphics.drawable.Drawable;
+import android.R.drawable;
 
 import  	java.net.URL;
 import  	java.net.URLConnection;
