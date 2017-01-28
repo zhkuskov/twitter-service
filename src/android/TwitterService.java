@@ -159,7 +159,7 @@ Drawable icon = res.getDrawable(R.drawable.icon);
         Notification notification = new Notification(1, contentTitle, when);
 		
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
-		Intent notificationIntent = new Intent(this);
+		Intent notificationIntent = new Intent(com.apps_cube.horoscope_ru.Horoscope.MAIN);
 		
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
         notification.setLatestEventInfo(this, contentTitle, contentText, contentIntent);
