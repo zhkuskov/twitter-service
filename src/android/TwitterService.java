@@ -155,7 +155,7 @@ public void showNotification( CharSequence contentTitle, CharSequence contentTex
 
 NotificationCompat.Builder mBuilder =
     new NotificationCompat.Builder(this)
-    .setSmallIcon(R.drawable.notification_icon)
+    .setSmallIcon(R.drawable.sym_action_email)
     .setContentTitle("My notification")
     .setContentText("Hello World!");
 
