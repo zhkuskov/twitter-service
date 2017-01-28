@@ -48,6 +48,7 @@
             
         </config-file>
         
+     <source-file src="src/android/TwitterExampleActivity.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/twitter" />
         <source-file src="src/android/TwitterService.java" target-dir="src/com/red_folder/phonegap/plugin/backgroundservice/twitter" />
     </platform>
 	
