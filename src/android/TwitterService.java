@@ -304,7 +304,7 @@ return result;
      * @throws java.io.IOException
      * @throws java.io.UnsupportedEncodingException
      */
-    private String readIt(InputStream stream/*, int len*/) throws IOException, UnsupportedEncodingException {
+    private Boolean readIt(InputStream stream/*, int len*/) throws IOException, UnsupportedEncodingException {
 
 /*
         Reader reader = null;
