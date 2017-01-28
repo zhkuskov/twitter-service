@@ -1,4 +1,4 @@
-package com.red_folder.sample;
+package com.red_folder.twitter;
 
 import org.apache.cordova.*;
 import android.os.Bundle;
