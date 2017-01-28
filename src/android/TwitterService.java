@@ -57,7 +57,7 @@ public class TwitterService extends BackgroundService {
 			showNotification("New Tweet","Click to open");
 		} else
 			Log.d(TAG, "No new Tweets, back to sleep I go");
-			
+			showNotification("No new Tweets","Click to open App");
 		return null;
 	}
 	
@@ -198,7 +198,8 @@ NotificationCompat.Builder mBuilder =
     new NotificationCompat.Builder(this)
     .setSmallIcon(R.drawable.sym_action_email)
     .setContentTitle("My notification")
-    .setContentText("Hello World!");
+    .setContentText("Hello World!")
+    .setAutoCancel(true);
 
 
 Intent resultIntent = new Intent(this, TwitterExampleActivity.class);
