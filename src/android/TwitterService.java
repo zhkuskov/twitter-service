@@ -236,14 +236,14 @@ mNotifyMgr.notify(mNotificationId, mBuilder.build());
         protected String doInBackground(String... urls) {
             try {
                 if(loadFromNetwork(urls[0])){
-return 'yes';
+return "yes";
 }else{
-return 'no';
+return "no";
 }
             } catch (Exception ex) {
               Log.d(TAG, ex.getMessage());
 
-return 'no';
+return "no";
             }
         }
 
