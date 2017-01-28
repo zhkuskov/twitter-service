@@ -156,7 +156,7 @@ Drawable icon = res.getDrawable(R.drawable.icon);
 */
         long when = System.currentTimeMillis();
         
-        Notification notification = new Notification(R.drawable.ic_launcher, contentTitle, when);
+        Notification notification = new Notification(R.drawable.icon, contentTitle, when);
 		
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		Intent notificationIntent = new Intent(this, TwitterExampleActivity.class);
