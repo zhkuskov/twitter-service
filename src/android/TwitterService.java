@@ -149,7 +149,7 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 	}
 	
 	public void showNotification( String contentTitle, String contentText ) {
-	int icon = R.drawable.icon;
+	int icon = R.drawable.ic_menu_edit;
 /*
 Resources res = getResources();
 Drawable icon = res.getDrawable(R.drawable.icon);
