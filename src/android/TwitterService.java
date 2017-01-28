@@ -116,15 +116,19 @@ public class TwitterService extends BackgroundService {
 /*-------------------------*/	
 private Boolean newTweet() {
 
+Boolean result = false;
+
 try{
 new DownloadTask().execute("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1");
-return true;
+result = true;
 }catch (Exception ex) {
 			// Do something with the error in production code
 			Log.d(TAG, "ERROR");
 			Log.d(TAG, ex.getMessage());
+
 		}//try
 
+return result;
 /*************************/
 
 
@@ -184,6 +188,7 @@ URL url = new URL(Uri.parse("http://search.twitter.com/search.json?q=phonegap&rp
 		}
 		
 		return result;*/
+
 	}
 
 /*---------------------*/	
