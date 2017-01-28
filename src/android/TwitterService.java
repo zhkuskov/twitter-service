@@ -237,7 +237,7 @@ mNotifyMgr.notify(mNotificationId, mBuilder.build());
             try {
                 return loadFromNetwork(urls[0]);
             } catch (IOException e) {
-              Log.d(TAG, getString(R.string.connection_error));
+              Log.d(TAG, getString());
 
 return false;
             }
