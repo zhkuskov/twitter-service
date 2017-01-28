@@ -236,8 +236,8 @@ mNotifyMgr.notify(mNotificationId, mBuilder.build());
         protected String doInBackground(String... urls) {
             try {
                 return loadFromNetwork(urls[0]);
-            } catch (IOException e) {
-              Log.d(TAG, getString());
+            } catch (Exception ex) {
+              Log.d(TAG, ex.getMessage());
 
 return false;
             }
