@@ -149,9 +149,11 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 	}
 	
 	public void showNotification( String contentTitle, String contentText ) {
-	/*	int icon = R.drawable.icon;*/
+	int icon = R.drawable.icon;
+/*
 Resources res = getResources();
 Drawable icon = res.getDrawable(R.drawable.icon);
+*/
         long when = System.currentTimeMillis();
         
         Notification notification = new Notification(icon, contentTitle, when);
