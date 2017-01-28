@@ -1,4 +1,4 @@
-package com.red_folder.sample;
+package com.red_folder.twitter;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -145,7 +145,7 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 	}
 	
 	public void showNotification( String contentTitle, String contentText ) {
-		int icon = R.drawable.ic_stat_notification;
+		int icon = R.drawable.icon;
         long when = System.currentTimeMillis();
         
         Notification notification = new Notification(icon, contentTitle, when);
