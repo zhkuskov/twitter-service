@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import  	android.graphics.drawable.Drawable;
 import android.R;
 
+import  	java.net.URI;
 import  	java.net.URL;
 import  	java.net.URLConnection;
 import  	java.net.HttpURLConnection;
@@ -102,7 +103,9 @@ public class TwitterService extends BackgroundService {
 
 		InputStream responseStream;
 
-URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1");
+URI uri = new URI("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1");
+
+URL url = uri.toURL();
    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
 		try {
