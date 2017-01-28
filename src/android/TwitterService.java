@@ -320,6 +320,8 @@ return result;
 */
 
 Boolean result = false;
+
+try{
 		String oldMaxID = getMaxID();
 		String newMaxID = oldMaxID;
 
@@ -345,6 +347,12 @@ reader = new InputStreamReader(stream, "UTF-8");
 					result = true;
 				}//if
 			}//if
+
+	} catch (Exception ex) {
+			// Do something with the error in production code
+			Log.d(TAG, "ERROR");
+			Log.d(TAG, ex.getMessage());
+		}//try
 
 return result;
 
