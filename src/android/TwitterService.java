@@ -149,6 +149,11 @@ URL url = new URL("http://search.twitter.com/search.json?q=phonegap&rpp=1&page1"
 	}
 	
 	public void showNotification( String contentTitle, String contentText ) {
+
+String ns = Context.NOTIFICATION_SERVICE;
+        
+NotificationManager nm = (NotificationManager) getSystemService(ns);
+
 /*	int icon = R.drawable(ic_menu_edit);*/
 /*
 Resources res = getResources();
@@ -161,11 +166,14 @@ Drawable icon = res.getDrawable(R.drawable.icon);
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		Intent notificationIntent = new Intent(this, TwitterExampleActivity.class);
 		
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-        notification.setLatestEventInfo(this, contentTitle, contentText, contentIntent);
+Context context = getApplicationContext();
+
         
-        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        nm.notify(1, notification);
+PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        
+notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+                
+nm.notify(1, notification);
 	}
 	
 }
