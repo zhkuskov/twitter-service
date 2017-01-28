@@ -1,5 +1,6 @@
 package com.red_folder.twitter;
 
+import android.app.Activity;
 import org.apache.cordova.*;
 import android.os.Bundle;
 
